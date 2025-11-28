@@ -1,3 +1,5 @@
+package claseCotizacion;
+
 public class Cotizacion {
     private int folio;
     private String descripcion;
@@ -74,18 +76,18 @@ public class Cotizacion {
 
     public float calcularPagoInicial(){
         float pagoInicial = 0.0f;
-        pagoInicial = this.precio - (porPagoInicial / 100 * precio);
+        pagoInicial = this.precio * this.porPagoInicial / 100;
         return pagoInicial;
     }
 
     public float calcularTotalAFin(){
-        float totalAFin = 0.0f;
+        float totalAFin;
         totalAFin = this.precio - this.calcularPagoInicial();
         return totalAFin;
     }
 
     public float calcularPagoMes(){
-        float pagoMes =  0.0f;
+        float pagoMes = 0.0f;
         pagoMes = this.calcularTotalAFin() / this.plazos;
         return pagoMes;
     }

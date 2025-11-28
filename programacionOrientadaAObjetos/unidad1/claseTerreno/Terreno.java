@@ -1,3 +1,5 @@
+package claseTerreno;
+
 //Unidad 1
 public class Terreno {
     private int numLote;

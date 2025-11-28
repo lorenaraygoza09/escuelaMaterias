@@ -1,3 +1,5 @@
+package claseTerreno;
+
 import java.util.Scanner;
 
 //clase principal para instanciar objetos
